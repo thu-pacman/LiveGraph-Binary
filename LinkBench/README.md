@@ -15,21 +15,10 @@ Build, config, and run the [modified Java driver](https://github.com/coolerzxw/L
 
 ## Replaying
 
-Clone and build the C++ driver.
+Download the C++ driver `linkbench_livegraph`, and run
 
 ```
-git clone https://github.com/coolerzxw/LinkBench-Cpp.git
-cd LinkBench-Cpp
-mkdir build
-cd build
-cmake ..
-make
+./linkbench_livegraph [database path] [max #vertices] [trace directory path] [#loaders] [#requesters]
 ```
 
-You can run each implementation as follows. `[#loaders]` and `[#requesters]` should equal the numbers during recording.
-
-```
-./livegraph [database path] [max #vertices] [trace directory path] [#loaders] [#requesters]
-./lmdb [trace directory path] [#loaders] [#requesters] [database path]
-./rocksdb [trace directory path] [#loaders] [#requesters] [database path]
-```
+`[#loaders]` and `[#requesters]` should equal the numbers during recording.
