@@ -4,14 +4,17 @@ As [LinkBench](https://github.com/facebookarchive/linkbench) is implemented in J
 
 These repositories are used to run LinkBench on LiveGraph:
 
-* A [modified LinkBench Java driver](https://github.com/coolerzxw/LinkBench), with a wrapper implementation which processes the queries correctly (by calling MySQL implementation inside) and also records the operations of each thread into files.
-* A [C++ driver](https://github.com/coolerzxw/LinkBench-Cpp), which reads the queries from files, calls LiveGraph (or other implementations LMDB and RocksDB), and gives performance statistics.
+* A modified LinkBench Java driver with a wrapper implementation which processes the queries correctly (by calling MySQL implementation inside) and also records the operations of each thread into files.
+* A C++ driver which reads the queries from files, calls LiveGraph (or other implementations LMDB and RocksDB), and gives performance statistics.
 
 Detailed steps of reproducing are listed as follows. For questions, you may want to open an issue or contact Jiping Yu (yjp19@mails.tsinghua.edu.cn). Also, we are currently working on implementing LinkBench directly in C++, to make reproducing the results easier.
 
 ## Recording
 
-Build, config, and run the [modified Java driver](https://github.com/coolerzxw/LinkBench) in the same way as the [original driver](https://github.com/facebookarchive/linkbench). After the run, the recorded traces are written to `record` directory of the current working directory.
+* Clone the [original LinkBench Java driver](https://github.com/facebookarchive/linkbench) and ensure the dependencies.
+* Instead of building the project, place `FacebookLinkBench.jar` (downloaded from the [Release page](https://github.com/thu-pacman/LiveGraph-Binary/releases)) into the `target` directory.
+* Run the driver in the same way as the original driver (by executing `./bin/linkbench [args]`) with the MySQL implementation. The single run must include the loading and requesting stages (specifying `-l -r` in the command line).
+* After the run, the recorded traces are saved to `record` directory of the current working directory.
 
 ## Replaying
 
