@@ -24,4 +24,4 @@ Download the C++ driver `linkbench_livegraph`, and run
 ./linkbench_livegraph [database path] [max #vertices] [trace directory path] [#loaders] [#requesters]
 ```
 
-`[#loaders]` and `[#requesters]` should equal the numbers during recording.
+`[#loaders]` and `[#requesters]` should equal the numbers during recording. You may need to properly specify `LD_LIBRARY_PATH` to find LiveGraph library files.
