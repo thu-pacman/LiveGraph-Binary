@@ -5,7 +5,7 @@ LiveGraph: a transactional graph storage system with purely sequential adjacency
 Xiaowei Zhu, Guanyu Feng, Marco Serafini, Xiaosong Ma, Jiping Yu, Lei Xie, Ashraf Aboulnaga, and Wenguang Chen.
 Proc. VLDB Endow. 13, 7 (March 2020), 1020–1034. DOI:https://doi.org/10.14778/3384345.3384351
 
-You can find the binary executables at the [Releases page](https://github.com/thu-pacman/LiveGraph-Binary/releases).
+You can find the binary executables at the [Releases page](https://github.com/thu-pacman/LiveGraph-Binary/releases) and the source code of LiveGraph at [https://github.com/thu-pacman/LiveGraph](https://github.com/thu-pacman/LiveGraph)
 
 ## Dependency
  - Binaries are built on Ubuntu 18.04
