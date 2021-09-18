@@ -12,7 +12,9 @@ Detailed steps of reproducing are listed as follows. For questions, you may want
 ## Recording
 
 * Clone the [original LinkBench Java driver](https://github.com/facebookarchive/linkbench) and ensure the dependencies.
-* Instead of building the project, place `FacebookLinkBench.jar` (downloaded from the [Release page](https://github.com/thu-pacman/LiveGraph-Binary/releases)) into the `target` directory.
+* Instead of building the project, place `FacebookLinkBench.jar` (downloaded from the [Release page](https://github.com/thu-pacman/LiveGraph-Binary/releases)) into the `target` directory.'
+* Modify your config file (like `something.properties`), change `linkstore = com.facebook.LinkBench.GraphStoreWrapper` and `nodestore = com.facebook.LinkBench.GraphStoreWrapper`.
+* Before running the driver, make sure there exists an empty directory named `record` in the current working directory.
 * Run the driver in the same way as the original driver (by executing `./bin/linkbench [args]`) with the MySQL implementation. The single run must include the loading and requesting stages (specifying `-l -r` in the command line).
 * After the run, the recorded traces are saved to `record` directory of the current working directory.
 
